@@ -1,0 +1,227 @@
+/* CSS Document */
+/* These are the basic UCL-CS styles.  */
+
+/* These styles apply to the whole page */   
+body {
+    background-color: #A3A3A3;
+    color: #000000;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size 100%;
+}
+
+a:link {
+    color: #000000
+}
+a:visited {
+    color: #000000
+}
+a:hover {
+    color: #606060
+}
+a:active {
+    color: #000000
+}
+
+p {
+    font-size: 100%;
+}	
+
+body>table, body td>table, td>*>table {
+	font-size: 9pt;
+}	
+
+body table {
+	font-size: small;
+        border: 3;
+}
+		
+td table { 
+	font-size: 100%;
+}
+
+table { 
+	font-weight: normal;
+	color: #000000;
+	caption-side: bottom;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	border-width: 2px;
+	border-spacing: 0px 0px;
+	border-collapse: collapse;
+}
+th {
+        color: #FFFFFF;
+	border-width: 1px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+
+}
+tr {
+	border-width: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+}
+
+td {
+	border-width: 0px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 4pt;
+	margin-top: 8pt;
+}
+h2 {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1em;
+	font-weight: normal;
+}
+h4 {
+	font-size: 1em;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.heavy {
+	font-weight: bold;
+}
+	
+/* These styles affect the main editable region of the document 
+   which has the identifier "main" */
+
+
+*#main table { 
+	font-weight: normal;
+	color: #000000;
+	caption-side: bottom;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+        border-bottom: 2px;
+        border-bottom-style: groove;
+	border-width: 2px;
+	border-spacing: 0px 0px;
+	border-collapse: collapse;
+}
+
+*#main th { 
+        background-color: SteelBlue;        
+	border-width: 0px;
+	text-align: center; 
+        font-weight: bold;
+	vertical-align: middle;
+        padding-left: 1ex;
+	padding-right: 1ex;
+	height: 3ex;
+}
+
+*#main td {
+/*	border-width: 0px; */
+/*    text-align: left; */
+        font-weight: normal;
+	vertical-align: top;
+        padding-left: 0ex;
+	padding-right: 1ex;
+	padding-bottom: 0ex;
+	padding-top: 0ex;
+        border-bottom: 1px;
+        border-bottom-style: groove;
+}
+
+
+*#gris table { 
+	font-weight: normal;
+	color: #000000;
+	caption-side: bottom;
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+        border-bottom: 2px;
+        border-bottom-style: groove;
+	border-width: 2px;
+	border-spacing: 0px 0px;
+	border-collapse: collapse;
+}
+
+*#gris th { 
+        background-color: #6699FF;        
+	border-width: 0px;
+	text-align: center; 
+        font-weight: bold;
+	vertical-align: middle;
+        padding-left: 1ex;
+	padding-right: 1ex;
+	height: 3ex;
+}
+
+*#gris td {
+/*	border-width: 0px; */
+/*    text-align: left; */
+        font-weight: normal;
+	vertical-align: top;
+        padding-left: 0ex;
+	padding-right: 1ex;
+	padding-bottom: 0ex;
+	padding-top: 0ex;
+        border-bottom: 1px;
+        border-bottom-style: groove;
+}
+
+*#main table.grey th, *#main tr.grey th, *#main th.grey {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+    background-color: #000000;
+}
+*#main table.grey td, *#main tr.grey td, *#main td.grey {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF;
+    background-color: #E0E0E0;
+	padding-bottom: 0ex;
+}
+*#main caption {
+    font-style: italic;
+}	
+*#main li ol {
+    list-style-type: lower-alpha; 
+}		
+*#main li ol li ol {
+    list-style-type: lower-roman; 
+}
+*#main pre {
+	font-family: Courier New, Courier, mono;
+	font-size: 1.2em
+}
+.fixed {
+	font-family: Courier New, Courier, mono;
+	font-size: 1.2em
+}
+.centred {
+    text-align: center;
+}	
+
+/* These styles are used when a page is printed. 
+   They suppress the top banner and, if present, the poster 
+   left and right hand columns. They also ensure that the
+   remaining text occupies the full width of the page.
+*/
+
+@media print {
+*#left, *#right,  
+*#poster, *#poster_spacer, *#bottom_line, *#rollovers {
+	display: none;
+}
+}

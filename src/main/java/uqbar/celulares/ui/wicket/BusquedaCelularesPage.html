@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+       	<link rel="stylesheet" type="text/css" href="styles/cs_basic.css" /> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>B&uacute;squeda de Celulares</title>
+    </head>
+    <body>
+
+        <table width="80%">
+            <tr>
+                <td>
+                    <h1>B&uacute;squeda de Celulares</h1>
+                </td>
+            </tr>
+        </table>
+        
+        <form wicket:id="buscarCelularesForm">
+            <table width="80%">
+                <tr>
+                    <td align="right">Nombre:</td>
+                    <td align="left">
+                        <input wicket:id="nombre" type="text" name="nombreBusqueda"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Numero:</td>
+                    <td align="left">
+                        <input wicket:id="numero" type="text" name="numeroBusqueda"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                    	<input type="submit" wicket:id="buscar" name="buscar" value="Buscar"/>
+                        <input type="submit" wicket:id="limpiar" name="limpiar" value="Limpiar"/>
+                        <input type="submit" wicket:id="nuevo" name="nuevo" value="Nuevo Celular"/>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            
+           	<table id="main" width="100%">
+               	<th id="main" width="35%" align="left">Nombre</th>
+               	<th id="main" width="25%" align="left">N&uacute;mero</th>
+               	<th id="main" width="20%" align="left">Modelo</th>
+               	<th id="main" width="10%">Recibe resumen</th>
+               	<th id="main" width="05%"></th>
+               	<th id="main" width="05%"></th>
+
+               	<tr wicket:id="resultados" id="main" width="100%">
+                   	<td id="main" width="35%">
+                   	    <span wicket:id="nombre">unNombre</span> 
+               	    </td> 
+           	        <td id="main" width="25%">
+       	            	<span wicket:id="numero">unNumero</span>
+   	                </td> 
+           	        <td id="main" width="20%">
+       	            	<span wicket:id="modeloCelular.descripcion">unModelo</span>
+   	                </td> 
+           	        <td id="main" width="10%" align="center">
+       	            	<input type="checkbox" wicket:id="recibeResumenCuenta"/>
+   	                </td> 
+           	        <td id="main" width="05%">
+       	            	<input type="submit" wicket:id="editar" value="Editar"/>
+   	                </td> 
+           	        <td id="main" width="05%">
+       	            	<input type="submit" wicket:id="eliminar" value="Eliminar"/>
+   	                </td> 
+               	</tr>
+           	</table>
+            <br/>
+        </form>
+    </body>
+</html>

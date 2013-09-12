@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles/cs_basic.css" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Editar Datos del Celular</title>
+    </head>
+    <body>
+        <table width="80%">
+            <tr>
+                <td>
+                    <h1 wicket:id="titulo">Editar Datos del Celular</h1>
+                </td>
+            </tr>
+        </table>
+        
+        <form wicket:id="nuevoCelularForm">
+            <table width="80%">
+                <tr>
+                    <td align="right">Nombre:</td>
+                    <td align="left">
+                        <input wicket:id="nombre" type="text" size="30"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">N&uacute;mero:</td>
+                    <td align="left">
+                        <input wicket:id="numero" type="text" size="20" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Modelo:</td>
+                    <td align="left">
+                        <select wicket:id="modeloCelular">
+                        	<option>NOKIA</option>
+                        	<option>Motorola</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Recibe resumen de cuenta:</td>
+                    <td align="left">
+                        <input wicket:id="recibeResumenCuenta" type="checkbox"/>
+                    </td>
+                </tr>                
+                <tr>
+                    <td height="20" colspan="2">
+                    	<div wicket:id="feedbackPanel">
+                    	</div> 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input wicket:id="aceptar" type="submit" name="aceptar" value="Aceptar" />
+                        <input wicket:id="cancelar" type="submit" name="cancelar" value="Cancelar" />
+                    </td>
+                </tr>
+            </table>
+            <br/>
+        </form>
+    </body>
+</html>
