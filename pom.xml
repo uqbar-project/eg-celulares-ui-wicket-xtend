@@ -29,6 +29,11 @@
 			<artifactId>uqbar-domain</artifactId>
 			<version>3.3</version>
 		</dependency>
+		<dependency>
+			<groupId>org.uqbar-project</groupId>
+			<artifactId>uqbar-wicket-xtend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- /UQBAR -->
 		
 		<!--  WICKET DEPENDENCIES -->
