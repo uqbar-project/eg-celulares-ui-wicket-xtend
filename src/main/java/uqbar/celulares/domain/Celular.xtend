@@ -10,7 +10,6 @@ class Celular extends Entity {
 
 	final int MAX_NUMERO = 100000
 
-	@Property Integer id
 	@Property Integer numero
 	@Property String nombre
 	@Property Modelo modeloCelular
