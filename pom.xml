@@ -6,22 +6,17 @@
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>celulares-ui-wicket-xtend</name>
-	<description></description>
 
 	<parent>
 		<groupId>org.uqbar-project</groupId>
 		<artifactId>uqbar-xtend-parent</artifactId>
 		<version>1.0</version>
 	</parent>
-
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
 	
+	<properties>
+		<jetty.version>6.1.4</jetty.version>
+	</properties>
+
 	<dependencies>
 		<!-- UQBAR -->
 		<dependency>
@@ -36,24 +31,6 @@
 		</dependency>
 		<!-- /UQBAR -->
 		
-		<!--  WICKET DEPENDENCIES -->
-		<dependency>
-			<groupId>org.apache.wicket</groupId>
-			<artifactId>wicket</artifactId>
-			<version>${wicket.version}</version>
-		</dependency>
-		<!-- LOGGING DEPENDENCIES - LOG4J -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.4.2</version>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.14</version>
-		</dependency>
-
 		<!--  JUNIT DEPENDENCY FOR TESTING -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -112,22 +89,6 @@
 				</excludes>
 			</testResource>
 		</testResources>
-		<plugins>
-			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>maven-jetty-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<configuration>
-					<downloadSources>true</downloadSources>
-				</configuration>
-			</plugin>
-		</plugins>
 	</build>
-	<properties>
-		<wicket.version>1.5-M2.1</wicket.version>
-		<jetty.version>6.1.4</jetty.version>
-	</properties>
+	
 </project>
