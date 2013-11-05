@@ -18,12 +18,12 @@ import uqbar.celulares.domain.Modelo
  */
 class EditarCelularPage extends WebPage {
 	extension WicketExtensionFactoryMethods = new WicketExtensionFactoryMethods
-	private final Celular celular;
-	private final boolean alta;
-	private final BusquedaCelularesPage mainPage;
+	private final Celular celular
+	private final boolean alta
+	private final BusquedaCelularesPage mainPage
 	
 	new(Celular celularAEditar, BusquedaCelularesPage mainPage) {
-		this.mainPage = mainPage;
+		this.mainPage = mainPage
 		
 		this.alta = celularAEditar.isNew()
 		this.celular = celularAEditar
@@ -39,40 +39,40 @@ class EditarCelularPage extends WebPage {
 		parent.addChild(new XButton("aceptar") => [
 			onClick = [|
 				try {
-					celular.validar();
+					celular.validar()
 					if (alta) {
-						Celular.home.create(celular);
+						Celular.home.create(celular)
 					} else {
-						Celular.home.delete(celular);
-						Celular.home.create(celular);
+						Celular.home.delete(celular)
+						Celular.home.create(celular)
 					}
 					volver()
 				} catch (UserException e) {
-					info(e.getMessage());
+					info(e.getMessage())
 				} catch (RuntimeException e) {
-					error("Ocurrió un error al procesar el pedido del celular. Consulte al administrador del sistema");
+					error("Ocurrió un error al procesar el pedido del celular. Consulte al administrador del sistema")
 				}
 			]				
 		])
 		parent.addChild(new XButton("cancelar") => [
-			onClick = [| volver() ]
-		]);
+			onClick = [| volver ]
+		])
 	}
 	
 	def volver() {
-		mainPage.buscarCelulares();
-		responsePage = mainPage;
+		mainPage.buscarCelulares()
+		responsePage = mainPage
 	}
 
 	def agregarCamposEdicion(Form<Celular> parent) {
-		parent.addChild(new TextField<String>("numero"));
-		parent.addChild(new TextField<String>("nombre"));
+		parent.addChild(new TextField<String>("numero"))
+		parent.addChild(new TextField<String>("nombre"))
 		parent.addChild(new DropDownChoice<Modelo>("modeloCelular") => [
 			choices = loadableModel([| Modelo.home.allInstances ])
-			choiceRenderer = choiceRenderer([Modelo m| m.getDescripcion()])
+			choiceRenderer = choiceRenderer([Modelo m| m.descripcion ])
 		]) 
-		parent.addChild(new CheckBox("recibeResumenCuenta"));
-		parent.addChild(new FeedbackPanel("feedbackPanel"));
+		parent.addChild(new CheckBox("recibeResumenCuenta"))
+		parent.addChild(new FeedbackPanel("feedbackPanel"))
 	}
 
 }
