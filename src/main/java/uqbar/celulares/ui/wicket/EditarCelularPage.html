@@ -7,36 +7,33 @@
     	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
     	<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/app.css" rel="stylesheet" media="screen">
         <title>Editar Datos del Celular</title>
     </head>
     <body>
     	<div class="container">
-	        <table width="80%">
-	            <tr>
-	                <td>
-	                    <h1 wicket:id="titulo">Editar Datos del Celular</h1>
-	                </td>
-	            </tr>
-	        </table>
-	        
+    		<div class="page-header">
+	        	<h1 wicket:id="titulo">Editar Datos del Celular</h1>
+			</div>
+			
 	        <form wicket:id="nuevoCelularForm" class="form">
 	        	<fieldset>
 	        	<div class="form-group">
-		        	<label class="control-label" for="nombre">Nombre</label>
+		        	<label class="control-label" for="nombre"><span class="glyphicon glyphicon-user"/>&nbsp;Nombre</label>
 		        	<div class="controls">
 		        		<input wicket:id="nombre" type="text" placeholder="Juan Perez" class="form-control" />
 		        	</div>
 	        	</div>
 	        	
 	        	<div class="form-group">
-        			<label class="control-label" for="nombre">N&uacute;mero</label>
+        			<label class="control-label" for="nombre"><span class="glyphicon glyphicon-earphone"/>&nbsp;N&uacute;mero</label>
         			<div class="controls">
         				<input wicket:id="numero" type="text" placeholder="47584777" class="form-control"/>
         	    	</div>
 	        	</div>
 	        	
 	        	<div class="form-group">
-		        	<label class="control-label" for="nombre">Modelo</label>
+		        	<label class="control-label" for="nombre"><span class="glyphicon glyphicon-phone"/>&nbsp;Modelo</label>
 		        	<div class="controls">
 			        	<select wicket:id="modeloCelular">
 			              	<option>NOKIA</option>
@@ -46,14 +43,14 @@
 	        	</div>
 	        	
 	        	<div class="form-group">
-			        <label class="control-label" for="nombre">Recibe resumen de cuenta</label>
+			        <label class="control-label" for="nombre"><span class="glyphicon glyphicon-file"/>Recibe resumen de cuenta</label>
 			        <div class="controls">
             			<input wicket:id="recibeResumenCuenta" type="checkbox"/>
                 	</div>
 	        	</div>
 	            
 	            <div wicket:id="feedbackPanel" class="alert alert-error">
-						<strong>Warning!</strong> Best check yo self, you're not looking too good.  
+						<strong>Warning!</strong> Best check yourself, you're not looking too good.  
 				</div>  
 	        	
 	            <div class="form-actions">

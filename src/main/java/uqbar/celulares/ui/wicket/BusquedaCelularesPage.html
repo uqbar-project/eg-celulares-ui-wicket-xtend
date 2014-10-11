@@ -5,29 +5,26 @@
        	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<!-- Bootstrap --> 
     	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
-    	<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">  
+    	<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
+    	<link href="css/app.css" rel="stylesheet" media="screen">  
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>B&uacute;squeda de Celulares</title>
     </head>
     <body>
 	 <div class="container">
-        <table width="80%">
-            <tr>
-                <td>
-                    <h1>B&uacute;squeda de Celulares</h1>
-                </td>
-            </tr>
-        </table>
-        
+	 	<div class="page-header">
+    	     <h1><span class="glyphicon glyphicon-phone"/>&nbsp;B&uacute;squeda de Celulares</h1>
+	    </div>
+	        
         <form wicket:id="buscarCelularesForm" class="form-horizontal">
         	<div class="form-group">
-           		<label class="control-label" for="nombre">Nombre</label>
+           		<label class="control-label" for="nombre"><span class="glyphicon glyphicon-user"/>&nbsp;Nombre</label>
               	<div class="controls">
             		<input wicket:id="nombre" type="text" placeholder="unNombre" class="form-control">
    		       	</div>
         	</div>
         	<div class="form-group">
-                <label for="numero">N&uacute;mero</label>
+                <label for="numero"><span class="glyphicon glyphicon-earphone"/>&nbsp;N&uacute;mero</label>
                 <div class="controls controls-row">
                 	<input wicket:id="numero" type="text" placeholder="1234" class="form-control">
                 </div>
