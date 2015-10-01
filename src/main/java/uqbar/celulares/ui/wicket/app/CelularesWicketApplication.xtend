@@ -1,11 +1,11 @@
 package uqbar.celulares.ui.wicket.app
 
+import ar.edu.celulares.domain.Celular
+import ar.edu.celulares.domain.Modelo
+import ar.edu.celulares.home.HomeCelulares
+import ar.edu.celulares.home.HomeModelos
 import org.apache.wicket.protocol.http.WebApplication
 import org.uqbar.commons.utils.ApplicationContext
-import uqbar.celulares.domain.Celular
-import uqbar.celulares.domain.HomeCelulares
-import uqbar.celulares.domain.HomeModelos
-import uqbar.celulares.domain.Modelo
 import uqbar.celulares.ui.wicket.BusquedaCelularesPage
 
 /**

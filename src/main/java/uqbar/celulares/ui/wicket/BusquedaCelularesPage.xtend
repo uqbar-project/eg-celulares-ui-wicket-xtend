@@ -1,5 +1,7 @@
 package uqbar.celulares.ui.wicket
 
+import ar.edu.celulares.applicationModel.BuscadorCelular
+import ar.edu.celulares.domain.Celular
 import org.apache.wicket.markup.html.WebPage
 import org.apache.wicket.markup.html.basic.Label
 import org.apache.wicket.markup.html.form.CheckBox
@@ -9,8 +11,6 @@ import org.apache.wicket.model.CompoundPropertyModel
 import org.uqbar.wicket.xtend.WicketExtensionFactoryMethods
 import org.uqbar.wicket.xtend.XButton
 import org.uqbar.wicket.xtend.XListView
-import uqbar.celulares.domain.BuscadorCelular
-import uqbar.celulares.domain.Celular
 
 /**
  * Pagina de busqueda de la aplicacion de celulares.

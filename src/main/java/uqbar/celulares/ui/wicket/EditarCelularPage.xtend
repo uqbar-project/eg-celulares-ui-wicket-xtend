@@ -1,5 +1,7 @@
 package uqbar.celulares.ui.wicket
 
+import ar.edu.celulares.domain.Celular
+import ar.edu.celulares.domain.Modelo
 import org.apache.wicket.markup.html.WebPage
 import org.apache.wicket.markup.html.basic.Label
 import org.apache.wicket.markup.html.form.CheckBox
@@ -10,8 +12,6 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel
 import org.uqbar.commons.model.UserException
 import org.uqbar.wicket.xtend.WicketExtensionFactoryMethods
 import org.uqbar.wicket.xtend.XButton
-import uqbar.celulares.domain.Celular
-import uqbar.celulares.domain.Modelo
 
 /**
  * 
