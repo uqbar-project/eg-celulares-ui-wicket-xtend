@@ -17,11 +17,13 @@ import org.uqbar.wicket.xtend.XListView
  */
 class BusquedaCelularesPage extends WebPage {
 	extension WicketExtensionFactoryMethods = new WicketExtensionFactoryMethods
-	var BuscadorCelular buscador
+	val BuscadorCelular buscador
 
 	new() {
 		this.buscador = new BuscadorCelular()
-		val Form<BuscadorCelular> buscarForm = new Form<BuscadorCelular>("buscarCelularesForm", new CompoundPropertyModel<BuscadorCelular>(this.buscador))
+		val Form<BuscadorCelular> buscarForm = new Form<BuscadorCelular>("buscarCelularesForm", 
+			new CompoundPropertyModel<BuscadorCelular>(this.buscador)
+		)
 		this.agregarCamposBusqueda(buscarForm)
 		this.agregarAcciones(buscarForm)
 		this.agregarGrillaResultados(buscarForm)
@@ -41,7 +43,7 @@ class BusquedaCelularesPage extends WebPage {
 
 	def agregarAcciones(Form<BuscadorCelular> parent) {
 		val buscarButton = new XButton("buscar")
-		buscarButton.onClick = [| buscador.search ]
+		buscarButton.onClick = [| this.buscarCelulares ]
 		parent.addChild(buscarButton)
 		
 		parent.addChild(new XButton("limpiar")

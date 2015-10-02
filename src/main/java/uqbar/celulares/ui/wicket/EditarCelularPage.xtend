@@ -69,7 +69,7 @@ class EditarCelularPage extends WebPage {
 		parent.addChild(new TextField<String>("nombre"))
 		parent.addChild(new DropDownChoice<Modelo>("modeloCelular") => [
 			choices = loadableModel([| Modelo.home.allInstances ])
-			choiceRenderer = choiceRenderer([Modelo m| m.descripcion ])
+			choiceRenderer = choiceRenderer([Modelo m| m.descripcion + " $ " + m.costo ])
 		]) 
 		parent.addChild(new CheckBox("recibeResumenCuenta"))
 		parent.addChild(new FeedbackPanel("feedbackPanel"))
